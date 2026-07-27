@@ -1,0 +1,55 @@
+---
+# Area Labels
+area/atif-export:
+  - changed-files:
+      - any-glob-to-any-file: "atif-export/**"
+
+area/harbor-tasks:
+  - changed-files:
+      - any-glob-to-any-file: "harbor-tasks/**"
+
+area/scripts:
+  - changed-files:
+      - any-glob-to-any-file: "*.py"
+
+area/tests:
+  - changed-files:
+      - any-glob-to-any-file: "tests/**/*"
+
+area/config:
+  - changed-files:
+      - any-glob-to-any-file: "pyproject.toml"
+      - any-glob-to-any-file: "*.toml"
+
+area/github:
+  - changed-files:
+      - any-glob-to-any-file: ".github/**/*"
+
+# Semantic Type Labels
+type/digest:
+  - head-branch: ["^renovate/"]
+  - head-branch: ["^deps/"]
+
+type/patch:
+  - any: ["title:/^(?:Fix|Patch|Update)/"]
+
+type/minor:
+  - any: ["title:/^(?:Add|Feature|Improve)/"]
+
+type/major:
+  - any: ["title:/^(?:BREAKING)/"]
+
+type/break:
+  - any: ["body:/BREAKING CHANGE:/"]
+
+# Documentation Labels
+type/docs:
+  - changed-files:
+      - any-glob-to-any-file: "*.md"
+
+# Core Files Labels
+type/core:
+  - changed-files:
+      - any-glob-to-any-file: "CODEOWNERS"
+      - any-glob-to-any-file: "LICENSE"
+      - any-glob-to-any-file: "README.md"

@@ -1,0 +1,30 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "config:base",
+    ":disableRateLimiting",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    ":enablePreCommit",
+    ":automergeDigest",
+    ":automergeBranch",
+  ],
+  dependencyDashboardTitle: "Renovate Dashboard 🤖",
+  suppressNotifications: ["prIgnoreNotification"],
+  minimumReleaseAge: "3 days",
+  automerge: true,
+  rebaseWhen: "conflicted",
+  commitBodyTable: true,
+  "pre-commit": {
+    enabled: true,
+  },
+  packageRules: [
+    {
+      description: "Auto merge non-major updates",
+      matchUpdateTypes: ["minor", "patch"],
+      automerge: true,
+      automergeType: "pr",
+    },
+  ],
+  ignorePaths: [],
+}

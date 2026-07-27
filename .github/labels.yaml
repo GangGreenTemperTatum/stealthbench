@@ -1,0 +1,84 @@
+---
+# Area Labels
+- name: area/atif-export
+  color: "4682B4" # Steel Blue
+  description: >-
+    Changes to ATIF export scripts and logic
+
+- name: area/harbor-tasks
+  color: "BC9BE3" # Lavender
+  description: >-
+    Changes to Harbor task generation and definitions
+
+- name: area/scripts
+  color: "72CCF3" # Light Blue
+  description: >-
+    Changes to root-level Python scripts
+
+- name: area/tests
+  color: "99CC00" # Lime Green
+  description: >-
+    Changes to test files and testing infrastructure
+
+- name: area/config
+  color: "CC6699" # Dusty Rose
+  description: >-
+    Changes to project configuration files
+
+- name: area/github
+  color: "F4D1B7" # Peach
+  description: >-
+    Changes made to GitHub Actions
+
+# Renovate Labels
+- name: renovate/github-action
+  color: "FF3366" # Hot Pink
+  description: >-
+    GitHub Action updates via Renovate
+
+- name: renovate/github-release
+  color: "3399FF" # Bright Blue
+  description: >-
+    GitHub Release updates via Renovate
+
+- name: renovate/python
+  color: "9933CC" # Purple
+  description: >-
+    Python dependency updates via Renovate
+
+# Semantic Type Labels
+- name: type/digest
+  color: "FF66CC" # Bright Pink
+  description: >-
+    Dependency digest updates
+
+- name: type/patch
+  color: "FFC300" # Golden Yellow
+  description: >-
+    Patch changes (fixes, updates)
+
+- name: type/minor
+  color: "FFD700" # Gold
+  description: >-
+    Minor changes (features, improvements)
+
+- name: type/major
+  color: "F6412D" # Red Orange
+  description: >-
+    Major changes
+
+- name: type/break
+  color: "FF0000" # Bright Red
+  description: >-
+    Breaking changes
+
+# Documentation Labels
+- name: type/docs
+  color: "0075CA" # Documentation Blue
+  description: >-
+    Documentation updates and improvements
+
+- name: type/core
+  color: "A2EEEF" # Light Blue
+  description: >-
+    Changes to core repository files and configurations

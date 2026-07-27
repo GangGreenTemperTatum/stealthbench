@@ -1,0 +1,38 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-added-large-files
+        args: ["--maxkb=10240"]
+      - id: check-json
+        exclude: ^assets/
+      - id: check-yaml
+
+  - repo: local
+    hooks:
+      - id: check-github-actions-pinned-deps
+        name: Check GitHub Actions use pinned SHA deps
+        language: python
+        entry: python .hooks/check_pinned_hash_dependencies.py
+        files: ^\.github/workflows/.*\.ya?ml$
+        pass_filenames: true
+
+      - id: ruff-lint
+        name: Ruff lint
+        language: system
+        entry: uv run ruff check .
+        types: [python]
+        pass_filenames: false
+
+      - id: ruff-format-check
+        name: Ruff format check
+        language: system
+        entry: uv run ruff format --check .
+        types: [python]
+        pass_filenames: false

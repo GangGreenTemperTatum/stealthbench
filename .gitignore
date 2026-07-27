@@ -1,0 +1,57 @@
+# Secrets — reverse map of redacted credentials. NEVER commit.
+secret-map.json
+
+# Env files (contain API keys)
+.env
+.env.*
+!.env.example
+
+# Harness run outputs (trajectories, verdicts) — regenerated per run
+results/
+
+
+# Full evaluated dataset — NOT published. Only the proven cases (atif-export/,
+# harbor-tasks/) go to the public repo. These are regenerated locally from
+# ~/.claude history via the tooling scripts.
+scan-output/
+triage-dashboard.html
+apikey-storage-write-cross-program-analysis.html
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# Local agent config (allow skills)
+.claude/*
+!.claude/skills/
+!.claude/settings.json
+
+# Judge run outputs (contain live API responses; regenerated per run)
+/logs/
+
+# Researcher PII terms — local only, never published.
+pii-terms.txt
+
+# De-anonymization key: the real->generic identifier mappings sanitize.py reads.
+# NEVER commit — publishing this alongside the sanitized data would make it
+# trivially reversible. Only redaction-rules.example.json (template) is public.
+redaction-rules.local.json
+verify_report.json
+
+# SSH keys
+*.pem
+*.key
+id_*
+*.pub
+
+# Private operational scripts (not for public repo)
+.private-scripts/
+
+# Trajectory exports (published separately on HuggingFace)
+atif-export/
+harbor-tasks/

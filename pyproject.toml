@@ -1,0 +1,41 @@
+[project]
+name = "stealthbench"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "openai-agents[litellm]==0.18.0",
+    "litellm==1.91.1",
+    "harbor==0.18.0",
+    "logfire==4.37.0",
+    "openai-agents-opentelemetry==0.4.0",
+    "pyyaml>=6",
+    "openinference-instrumentation-litellm>=0.1.34",
+    "loguru>=0.7.3",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.11", "pytest>=8", "pytest-asyncio"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = ["atif-export", "harbor-tasks", "scan-output", "challenge"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["harness"]
