@@ -13,6 +13,7 @@ minted: 2026-07-08 -->
 
 [![arXiv](https://img.shields.io/badge/arXiv-StealthBench-b31b1b.svg)](#)
 [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Dataset-ffca28.svg)](https://huggingface.co/datasets/0xmoose/stealthbench)
+[![GitHub release](https://img.shields.io/github/v/release/GangGreenTemperTatum/stealthbench)](https://github.com/GangGreenTemperTatum/stealthbench/releases)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/GangGreenTemperTatum/stealthbench?style=social)](https://github.com/GangGreenTemperTatum/stealthbench/stargazers)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/GangGreenTemperTatum/stealthbench/pulls)
