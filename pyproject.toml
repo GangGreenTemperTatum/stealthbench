@@ -5,7 +5,7 @@ requires-python = ">=3.12"
 dependencies = [
     "openai-agents[litellm]==0.18.0",
     "litellm==1.91.1",
-    "harbor==0.18.0",
+    "harbor==0.20.0",
     "logfire==4.37.0",
     "openai-agents-opentelemetry==0.4.0",
     "pyyaml>=6",
