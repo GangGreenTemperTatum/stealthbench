@@ -647,7 +647,7 @@ wheels = [
 
 [[package]]
 name = "harbor"
-version = "0.18.0"
+version = "0.20.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "dirhash" },
@@ -672,9 +672,9 @@ dependencies = [
     { name = "typer" },
     { name = "uvicorn" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/38/24/7222433d3b9f665db1759456c281a9c136b921300be5d7af269f183ee59e/harbor-0.18.0.tar.gz", hash = "sha256:9b918b99ec38b4e16db7e0b797dcebf92bfc8be9d9ba22a2d2ed6ebb8feb38df", size = 1535447, upload-time = "2026-07-07T20:29:46.878Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/1e/da/5a26998c6e7d9455321ab39bc8e9122993892ece13c3ad4f2b0de986aaf6/harbor-0.20.0.tar.gz", hash = "sha256:e2e5e88f772690fd121553ca34fd5d6dd6b4aaa51c8fae635abc84b112303112", size = 1590870, upload-time = "2026-07-18T21:25:22.578Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e8/81/b5d4f3119b131ee4a41e7036c7c1315e13c27849ffb59c3364875768132a/harbor-0.18.0-py3-none-any.whl", hash = "sha256:e436f04fca35bb3705be603b8c123d0472418d10120cfd7e5ba8dc902e56bc32", size = 1735449, upload-time = "2026-07-07T20:29:45.064Z" },
+    { url = "https://files.pythonhosted.org/packages/76/03/b6617f32385295729f3af0ae0d512cf87ba4793b9ce462ea020d776a9025/harbor-0.20.0-py3-none-any.whl", hash = "sha256:4b7e48223aea2384cdb8c9eff35eaebd482fc9b1ec09f8193a121c47356ff19a", size = 1792416, upload-time = "2026-07-18T21:25:19.206Z" },
 ]
 
 [[package]]
@@ -1195,7 +1195,7 @@ wheels = [
 
 [[package]]
 name = "openai"
-version = "2.44.0"
+version = "2.49.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
@@ -1207,14 +1207,14 @@ dependencies = [
     { name = "tqdm" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/49/f5/7c7cb955305cb41f7f3c5fd7e0e38bf6bbf2658468863d4b7b868a5cb8df/openai-2.44.0.tar.gz", hash = "sha256:68a5a5ffad82b8ff7d451c437529fb64f7c3b8123aaf0c021966a882d9e3947d", size = 988753, upload-time = "2026-06-24T20:56:02.293Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d3/9a/275bee8349b766906741223b98c668fcd4e17e1982a87597778743b4156f/openai-2.49.0.tar.gz", hash = "sha256:80f934333b5b83cef2fde9af7151dacaa72e150f43f92b7675f7647ca6157f48", size = 1080973, upload-time = "2026-07-27T22:51:40.014Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ae/f4/561ed79fd94876160018a5e75254cfcb9b0e62d4dded9dcb20072e86d623/openai-2.44.0-py3-none-any.whl", hash = "sha256:0a2a3ab2e29aeda368700f662ff9ba0f9df17ba4c54577a64e08b8115a3cc0ad", size = 1366216, upload-time = "2026-06-24T20:55:58.882Z" },
+    { url = "https://files.pythonhosted.org/packages/b1/ca/53357e460a1172e831ecbe43dd0c37342b7211a1eb09f4cf21a412adbbdf/openai-2.49.0-py3-none-any.whl", hash = "sha256:b694201eaa42a1ccf2aa125fe29458150108fb22df1abfb55d7188599da81d8c", size = 1648589, upload-time = "2026-07-27T22:51:38Z" },
 ]
 
 [[package]]
 name = "openai-agents"
-version = "0.18.0"
+version = "0.18.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "griffelib" },
@@ -1225,9 +1225,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "websockets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e2/53/80500b9001a9cd06bd1f648b0e8ad074abc41899dce35810dce33dccd519/openai_agents-0.18.0.tar.gz", hash = "sha256:7971c7d2c3f4a1e14f552b288d83c24cca33f45cafa5821b2aaa12b77dbe24d9", size = 5509908, upload-time = "2026-07-07T06:02:35.583Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/80/3f/b1162cad8720fafc9cf658d6896027385967f5006adfb92ae0dab2b54a70/openai_agents-0.18.3.tar.gz", hash = "sha256:e637f5f5a50692ccbedb0e4f7f2e4f8e2facfcddd41142f35faf90c89b700fc3", size = 5577652, upload-time = "2026-07-17T03:40:25.208Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/04/c4/02a294f7511df2b110368ce36cb1c9132c542e446f04e8d0fde5db35fe53/openai_agents-0.18.0-py3-none-any.whl", hash = "sha256:4126b982b23598073e6e15305c4e515a80c0073e7beeb0895cd43611ea86f1b2", size = 859699, upload-time = "2026-07-07T06:02:33.706Z" },
+    { url = "https://files.pythonhosted.org/packages/e0/7c/08b9929a15131081898e38c5612d44ee293851d5c80f31ca1153efe82143/openai_agents-0.18.3-py3-none-any.whl", hash = "sha256:c6ed971fdeb34d39a9931787bd3960c1e84dc5d7345705794cc5cab8a1158d07", size = 880799, upload-time = "2026-07-17T03:40:23.163Z" },
 ]
 
 [package.optional-dependencies]
@@ -2159,11 +2159,11 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "harbor", specifier = "==0.18.0" },
-    { name = "litellm", specifier = "==1.93.0" },
+    { name = "harbor", specifier = "==0.20.0" },
+    { name = "litellm", specifier = "==1.91.1" },
     { name = "logfire", specifier = "==4.37.0" },
     { name = "loguru", specifier = ">=0.7.3" },
-    { name = "openai-agents", extras = ["litellm"], specifier = "==0.18.0" },
+    { name = "openai-agents", extras = ["litellm"], specifier = "==0.18.3" },
     { name = "openai-agents-opentelemetry", specifier = "==0.4.0" },
     { name = "openinference-instrumentation-litellm", specifier = ">=0.1.34" },
     { name = "pyyaml", specifier = ">=6" },
