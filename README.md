@@ -11,7 +11,7 @@ minted: 2026-07-08 -->
 
 **Measuring operational stealth in autonomous offensive-security agents.**
 
-[![Website](https://img.shields.io/badge/🌐%20Website-stealthbench.com-000000.svg)](https://stealthbench.com)
+[![Website](https://img.shields.io/badge/🌐%20Website-stealthbench.com-d9ff43?style=flat&labelColor=11130f)](https://stealthbench.com)
 [![arXiv](https://img.shields.io/badge/arXiv-StealthBench-b31b1b.svg)](#)
 [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Dataset-ffca28.svg)](https://huggingface.co/datasets/0xmoose/stealthbench)
 [![GitHub release](https://img.shields.io/github/v/release/GangGreenTemperTatum/stealthbench)](https://github.com/GangGreenTemperTatum/stealthbench/releases)
