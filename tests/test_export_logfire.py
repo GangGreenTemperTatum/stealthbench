@@ -1,19 +1,16 @@
 """Tests for scripts/export-logfire.py incremental export logic."""
+
 from __future__ import annotations
 
+import importlib
 import json
 import sys
 from pathlib import Path
 from unittest.mock import patch
 
-import pytest
-
-# Import the export script as a module
+# Import the export script as a module (hyphenated filename requires importlib)
 SCRIPTS_DIR = Path(__file__).resolve().parent.parent / "scripts"
 sys.path.insert(0, str(SCRIPTS_DIR))
-
-import importlib
-
 export_logfire = importlib.import_module("export-logfire")
 
 
@@ -55,14 +52,17 @@ def test_incremental_deduplicates_by_span_id(tmp_path: Path) -> None:
     data_path = tmp_path / export_logfire.DATA_FILE
 
     # Pre-populate with one span
-    existing = {"span_id": "existing-1", "start_timestamp": "2026-07-25T10:00:00Z", "message": "old"}
+    existing = {
+        "span_id": "existing-1",
+        "start_timestamp": "2026-07-25T10:00:00Z",
+        "message": "old",
+    }
     data_path.write_text(json.dumps(existing) + "\n")
 
     # Mock query to return the existing span + a new one
     page_data = {
         "columns": [
-            {"name": col, "datatype": "Utf8", "values": []}
-            for col in export_logfire.COLUMNS
+            {"name": col, "datatype": "Utf8", "values": []} for col in export_logfire.COLUMNS
         ]
     }
     # Fill in values
@@ -92,9 +92,7 @@ def test_incremental_deduplicates_by_span_id(tmp_path: Path) -> None:
         return page_data
 
     with patch.object(export_logfire, "query", side_effect=mock_query):
-        exported = export_logfire.export(
-            "fake-token", tmp_path, since="2026-07-25T09:00:00Z"
-        )
+        export_logfire.export("fake-token", tmp_path, since="2026-07-25T09:00:00Z")
 
     # Read the file — should have 2 lines total (1 existing + 1 new), not 3
     lines = data_path.read_text().strip().split("\n")
@@ -108,7 +106,14 @@ def test_checkpoint_saved_during_export(tmp_path: Path) -> None:
     """Checkpoint should be written during export for crash recovery."""
     page_data = {
         "columns": [
-            {"name": col, "datatype": "Utf8", "values": [f"val-{i}" if col != "start_timestamp" else f"2026-07-25T12:0{i}:00Z" for i in range(3)]}
+            {
+                "name": col,
+                "datatype": "Utf8",
+                "values": [
+                    f"val-{i}" if col != "start_timestamp" else f"2026-07-25T12:0{i}:00Z"
+                    for i in range(3)
+                ],
+            }
             for col in export_logfire.COLUMNS
         ]
     }
