@@ -164,7 +164,7 @@ runs 14 tasks and costs approximately $2-5 depending on the model.
 @misc{stealthbench2026,
   title   = {StealthBench: Measuring Operational Stealth in Autonomous
              Offensive-Security Agents},
-  author  = {Wood, Adrian and Dawson, Ads},
+  author  = {Dawson, Ads and Wood, Adrian},
   year    = {2026},
   url     = {https://github.com/GangGreenTemperTatum/stealthbench}
 }
