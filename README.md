@@ -14,6 +14,7 @@ minted: 2026-07-08 -->
 [![Website](https://img.shields.io/badge/🌐%20Website-stealthbench.com-d9ff43?style=flat&labelColor=11130f)](https://stealthbench.com)
 [![arXiv](https://img.shields.io/badge/arXiv-2607.26314-b31b1b.svg)](https://arxiv.org/abs/2607.26314)
 [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Dataset-ffca28.svg)](https://huggingface.co/datasets/0xmoose/stealthbench)
+[![Daily Paper](https://img.shields.io/badge/🤗%20Daily%20Paper-2607.26314-ffca28.svg)](https://huggingface.co/papers/2607.26314)
 [![GitHub release](https://img.shields.io/github/v/release/GangGreenTemperTatum/stealthbench)](https://github.com/GangGreenTemperTatum/stealthbench/releases)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/GangGreenTemperTatum/stealthbench?style=social)](https://github.com/GangGreenTemperTatum/stealthbench/stargazers)
