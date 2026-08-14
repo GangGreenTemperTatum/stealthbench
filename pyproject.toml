@@ -3,7 +3,7 @@ name = "stealthbench"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
-    "openai-agents[litellm]==0.19.4",
+    "openai-agents[litellm]==0.20.0",
     "litellm==1.93.0",
     "harbor==0.21.0",
     "logfire==4.40.0",
