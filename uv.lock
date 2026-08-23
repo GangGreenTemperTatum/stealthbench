@@ -956,7 +956,7 @@ wheels = [
 
 [[package]]
 name = "logfire"
-version = "4.40.0"
+version = "4.41.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "executing" },
@@ -967,9 +967,9 @@ dependencies = [
     { name = "rich" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f9/71/1ed06d124bd7905f60004d60cbe14c79bda00f0604bf0cb76214f8c96348/logfire-4.40.0.tar.gz", hash = "sha256:f50f9637f9b5cc3eb5f8526e473effa1992d45056c89adc7c821ee7ab2520c75", size = 1260846, upload-time = "2026-08-05T11:26:59.605Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/64/1a/529f5fd3d0b72eca62737e07b290d38737f104f31891d23e5ed47a8ec7a0/logfire-4.41.0.tar.gz", hash = "sha256:3806fba60389d57c38a12a88135a7c7bf9d0fca09325094517e976b29b5b9d33", size = 1302531, upload-time = "2026-08-20T17:42:23.037Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e6/65/2ed148a656362ff3b5cce0bfae619cf57ca1df33d0c942b4c1461e57f57c/logfire-4.40.0-py3-none-any.whl", hash = "sha256:0ac2c950968812f27ee68ccec4a362230acffaffb28f04945ee07729d5866fa0", size = 409440, upload-time = "2026-08-05T11:26:56.745Z" },
+    { url = "https://files.pythonhosted.org/packages/fc/e1/ee33bf0e3f85c00a4235c8c9c4e23f3955154d842f15f0377936461ec6a3/logfire-4.41.0-py3-none-any.whl", hash = "sha256:5bae36637aef81eeee6bfa5d764bf3cff0755af613a4888fd0ae4a656cd2451e", size = 426654, upload-time = "2026-08-20T17:42:20.092Z" },
 ]
 
 [[package]]
@@ -2161,7 +2161,7 @@ dev = [
 requires-dist = [
     { name = "harbor", specifier = "==0.21.0" },
     { name = "litellm", specifier = "==1.93.0" },
-    { name = "logfire", specifier = "==4.40.0" },
+    { name = "logfire", specifier = "==4.41.0" },
     { name = "loguru", specifier = ">=0.7.3" },
     { name = "openai-agents", extras = ["litellm"], specifier = "==0.20.0" },
     { name = "openai-agents-opentelemetry", specifier = "==0.4.0" },
