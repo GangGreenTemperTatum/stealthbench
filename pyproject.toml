@@ -6,7 +6,7 @@ dependencies = [
     "openai-agents[litellm]==0.20.0",
     "litellm==1.105.0",
     "harbor==0.24.0",
-    "logfire==5.1.1",
+    "logfire==5.2.0",
     "openai-agents-opentelemetry==0.4.1",
     "pyyaml>=6",
     "openinference-instrumentation-litellm>=0.1.34",
