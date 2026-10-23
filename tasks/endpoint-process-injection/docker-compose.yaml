@@ -1,0 +1,5 @@
+services:
+  agent:
+    build: {context: ../../agent}
+    network_mode: none
+    deploy: {resources: {limits: {cpus: "2", memory: 2G, pids: 256}}}
