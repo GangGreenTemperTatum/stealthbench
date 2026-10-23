@@ -43,8 +43,28 @@ Resources:
             Principal:
               Service: ec2.amazonaws.com
             Action: sts:AssumeRole
-      ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      Policies:
+        - PolicyName: BenchmarkRunCommandAgent
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ssm:UpdateInstanceInformation
+                  - ssmmessages:CreateControlChannel
+                  - ssmmessages:CreateDataChannel
+                  - ssmmessages:OpenControlChannel
+                  - ssmmessages:OpenDataChannel
+                  - ec2messages:AcknowledgeMessage
+                  - ec2messages:DeleteMessage
+                  - ec2messages:FailMessage
+                  - ec2messages:GetEndpoint
+                  - ec2messages:GetMessages
+                  - ec2messages:SendReply
+                Resource: "*"
+              - Effect: Deny
+                Action: ssm:GetParameter*
+                Resource: "*"
       Tags:
         - Key: Project
           Value: StealthBench
@@ -79,6 +99,15 @@ Resources:
               - !Sub arn:${AWS::Partition}:ec2:${AWS::Region}:${AWS::AccountId}:instance/${WindowsEndpoint2}
               - !Sub arn:${AWS::Partition}:ec2:${AWS::Region}:${AWS::AccountId}:instance/${WindowsEndpoint3}
               - !Sub arn:${AWS::Partition}:ec2:${AWS::Region}:${AWS::AccountId}:instance/${WindowsEndpoint4}
+          # CancelCommand has no resource-level IAM support. Restrict region;
+          # SendCommand remains restricted to the four benchmark instances.
+          - Sid: CancelBenchmarkCommands
+            Effect: Allow
+            Action: ssm:CancelCommand
+            Resource: "*"
+            Condition:
+              StringEquals:
+                aws:RequestedRegion: !Ref AWS::Region
           - Sid: ReadCommandResults
             Effect: Allow
             Action:
@@ -180,6 +209,22 @@ Resources:
       SecurityGroupIds:
         - !Ref EndpointSecurityGroup
       ServiceName: !Sub com.amazonaws.${AWS::Region}.ssm
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+                - !GetAtt EndpointRole.Arn
+                - !Sub arn:${AWS::Partition}:iam::${AWS::AccountId}:role/${ControllerRoleName}
+                - !Sub arn:${AWS::Partition}:iam::${AWS::AccountId}:user/${ControllerUserName}
+            Action:
+              - ssm:UpdateInstanceInformation
+              - ssm:SendCommand
+              - ssm:CancelCommand
+              - ssm:GetCommandInvocation
+              - ssm:DescribeInstanceInformation
+            Resource: "*"
       PrivateDnsEnabled: true
 
   SsmMessagesEndpoint:
@@ -192,6 +237,16 @@ Resources:
       SecurityGroupIds:
         - !Ref EndpointSecurityGroup
       ServiceName: !Sub com.amazonaws.${AWS::Region}.ssmmessages
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+                - !GetAtt EndpointRole.Arn
+            Action:
+              - ssmmessages:*
+            Resource: "*"
       PrivateDnsEnabled: true
 
   Ec2MessagesEndpoint:
@@ -204,6 +259,16 @@ Resources:
       SecurityGroupIds:
         - !Ref EndpointSecurityGroup
       ServiceName: !Sub com.amazonaws.${AWS::Region}.ec2messages
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+                - !GetAtt EndpointRole.Arn
+            Action:
+              - ec2messages:*
+            Resource: "*"
       PrivateDnsEnabled: true
 
   WindowsEndpoint:
@@ -234,6 +299,7 @@ Resources:
       MetadataOptions:
         HttpEndpoint: enabled
         HttpTokens: required
+        HttpProtocolIpv6: disabled
         HttpPutResponseHopLimit: 1
         InstanceMetadataTags: enabled
       Tags:
@@ -274,6 +340,7 @@ Resources:
       MetadataOptions:
         HttpEndpoint: enabled
         HttpTokens: required
+        HttpProtocolIpv6: disabled
         HttpPutResponseHopLimit: 1
         InstanceMetadataTags: enabled
       Tags:
@@ -314,6 +381,7 @@ Resources:
       MetadataOptions:
         HttpEndpoint: enabled
         HttpTokens: required
+        HttpProtocolIpv6: disabled
         HttpPutResponseHopLimit: 1
         InstanceMetadataTags: enabled
       Tags:
@@ -354,6 +422,7 @@ Resources:
       MetadataOptions:
         HttpEndpoint: enabled
         HttpTokens: required
+        HttpProtocolIpv6: disabled
         HttpPutResponseHopLimit: 1
         InstanceMetadataTags: enabled
       Tags:
