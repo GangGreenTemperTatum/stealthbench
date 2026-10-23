@@ -13,6 +13,11 @@ repos:
       - id: check-json
         exclude: ^assets/
       - id: check-yaml
+        exclude: ^infra/aws/windows-endpoint\.yaml$
+      - id: check-yaml
+        name: Check CloudFormation YAML
+        args: ["--unsafe"]
+        files: ^infra/aws/windows-endpoint\.yaml$
 
   - repo: local
     hooks:

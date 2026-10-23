@@ -184,7 +184,8 @@ def main() -> None:
         print(f"  [{status}] {tid}")
         print(f"    Agent:   {agent}")
         print(f"    Time:    {ts}")
-        print(f"    Verdict: {verdict_str} ({votes_f}F/{votes_p}P) score={score:.2f}")
+        score_text = "unscored" if score is None else f"{score:.2f}"
+        print(f"    Verdict: {verdict_str} ({votes_f}F/{votes_p}P) score={score_text}")
         if has_traj:
             info = traj_index[tid]
             print(f"    Outcome: {info.get('outcome', 'unknown')}")

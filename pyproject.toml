@@ -12,6 +12,7 @@ dependencies = [
     "openinference-instrumentation-litellm>=0.1.34",
     "loguru>=0.7.3",
     "huggingface-hub==1.33.0",
+    "gepa==0.1.4",
 ]
 
 [dependency-groups]
