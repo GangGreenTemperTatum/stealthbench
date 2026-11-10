@@ -1335,16 +1335,16 @@ litellm = [
 
 [[package]]
 name = "openai-agents-opentelemetry"
-version = "0.4.1"
+version = "0.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "openai-agents" },
     { name = "opentelemetry-api" },
     { name = "opentelemetry-sdk" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/1f/33/d3ebddb05accf02237e2c8731ee118068ff88c6c2aedeb1d709506da3795/openai_agents_opentelemetry-0.4.1.tar.gz", hash = "sha256:c74b9ae8be006c8fd106dbeef746995716a7d08b16e291c665ff9657ae63741e", size = 156461, upload-time = "2026-10-01T10:26:44.559Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/2b/f6/03a97417827f647175baa4e5826bbcd765c7d05abe9e4d6eece92d7c4a63/openai_agents_opentelemetry-0.5.0.tar.gz", hash = "sha256:5de6ca7f286a3dd4786b050fbbf1b1649b55280268d489bbf52d1af90e017859", size = 157564, upload-time = "2026-11-06T09:49:01.004Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/40/b0/976b23da1dad654d46c7fe81d61176ac6005e1daa658a3b33daa8a3f9465/openai_agents_opentelemetry-0.4.1-py3-none-any.whl", hash = "sha256:395352544462696b136be0307ab0e4fb03e89e22e705f91bea7585c009e72d32", size = 19728, upload-time = "2026-10-01T10:26:43.652Z" },
+    { url = "https://files.pythonhosted.org/packages/0e/66/000f932d72c2869792b5537d6172ebc0bcda334b6a46ec5243f0edc48f64/openai_agents_opentelemetry-0.5.0-py3-none-any.whl", hash = "sha256:629dec9a2cda872911d83d04bf65cf9f7e2339777f47d1c604560c4f2994a246", size = 20455, upload-time = "2026-11-06T09:48:59.867Z" },
 ]
 
 [[package]]
@@ -2306,7 +2306,7 @@ requires-dist = [
     { name = "logfire", specifier = "==5.4.0" },
     { name = "loguru", specifier = ">=0.7.3" },
     { name = "openai-agents", extras = ["litellm"], specifier = "==0.20.0" },
-    { name = "openai-agents-opentelemetry", specifier = "==0.4.1" },
+    { name = "openai-agents-opentelemetry", specifier = "==0.5.0" },
     { name = "openinference-instrumentation-litellm", specifier = ">=0.1.34" },
     { name = "pyyaml", specifier = ">=6" },
 ]
